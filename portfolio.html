@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>besher coding | portfolio</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="author" content="ArtTemplate" />
+    <meta name="description" content="بروتوفوليو بشر الحاج عمر - مشاريع هندسية متكاملة في تطوير الويب وأنظمة البيانات" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="besher coding | portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="me.jpeg" />
+    <meta property="og:description" content="portfolio بشر الحاج عمر" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="114x114" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="72x72" href="me.jpeg">
+    <link rel="shortcut icon" href="me.jpeg" type="image/jpeg">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styl.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        .portfolio-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-18);
+            padding: 1.75rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .project-card__top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .project-card__heading {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .project-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            min-width: 46px;
+            border-radius: 12px;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            color: #818cf8;
+            font-size: 1.1rem;
+        }
+
+        .project-name {
+            margin: 0 0 0.2rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-heading);
+        }
+
+        .project-type {
+            margin: 0;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 0.35rem 0.8rem;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.55);
+            white-space: nowrap;
+        }
+
+        .project-badge i {
+            color: #f59e0b;
+            font-size: 0.78rem;
+        }
+
+        .project-desc {
+            font-size: 0.92rem;
+            line-height: 1.85;
+            color: var(--color-paragraph);
+            margin: 0 0 1.2rem 0;
+        }
+
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            font-size: 0.78rem;
+            padding: 0.25rem 0.7rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            border-radius: 8px;
+            direction: ltr;
+        }
+
+        .nav__item a.active {
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="container gutter-top gutter-bottom">
+            <div class="row sticky-parent">
+
+                <!-- Sidebar -->
+                <aside class="col-12 col-md-12 col-xl-3">
+                    <div class="sidebar box-outer sticky-column">
+                        <div class="sidebar__base-info">
+                            <figure class="avatar-box">
+                                <img src="me.jpeg" alt="بشر الحاج عمر">
+                            </figure>
+                            <div class="text-xl-center">
+                                <h3 class="title title--h3 sidebar__name">بشر الحاج عمر</h3>
+                                <div class="badge">مبرمج و صانع محتوي</div>
+                            </div>
+                            <button class="btn btn--small btn--icon-right sidebar__btn js-btn-toggle">
+                                <span>عرض الروابط</span><i class="feathericon-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="sidebar__additional-info js-show">
+                            <div class="separation"></div>
+                            <ul class="details-info">
+                                <li class="details-info__item">
+                                    <span class="box box--s2 icon-box"><i class="font-icon icon-envelope"></i></span>
+                                    <div class="contacts-block__info">
+                                        <span class="overhead">البريد الالكتروني</span>
+                                        <a class="text-overflow" href="mailto:besherallhagomar87@gmail.com"
+                                            title="besherallhagomar87@gmail.com"
+                                            style="font-size:13px;">b.hagomar87@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="details-info__item">
+                                    <span class="box box--s2 icon-box"><i class="font-icon icon-phone"></i></span>
+                                    <div class="contacts-block__info">
+                                        <span class="overhead">واتس اب للاعمال والتعاون</span>
+                                        <a href=""><span class="text-overflow"
+                                                title="+963991318649">963991318649+</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="separation d-xl-none"></div>
+                            <div class="social">
+                                <a class="social__link" href=""><i class="feathericon-linkedin"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-facebook"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-youtube"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Content -->
+                <div class="col-12 col-md-12 col-xl-9">
+                    <div class="box-outer">
+
+                        <!-- Menu -->
+                        <div class="nav-container">
+                            <ul class="nav">
+                                <li class="nav__item"><a href="index.html">الرئيسية</a></li>
+                                <li class="nav__item"><a href="resume.html">السيرة الذاتية</a></li>
+                                <li class="nav__item"><a href="portfolio.html" class="active">معرض الاعمال</a></li>
+                                <li class="nav__item"><a href="about.html">المهارات</a></li>
+                                <li class="nav__item"><a href="services.html">الخدمات</a></li>
+                                <li class="nav__item"><a href="blog.html">المدونة</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Portfolio Header -->
+                        <div class="pb-0 pb-sm-2">
+                            <h1 class="title title--h1 title__separate">معرض الاعمال</h1>
+                            <p style="font-size: large;">مجموعة من المشاريع الهندسية المتكاملة التي عملت عليها، تغطي
+                                أنظمة التجارة الإلكترونية، إدارة المشاريع، وأتمتة البيانات.</p>
+                        </div>
+
+                        <!-- Projects -->
+                        <div class="portfolio-grid">
+
+                            <!-- ===== المشروع 1 ===== -->
+                            <div class="project-card">
+                                <div class="project-card__top">
+                                    <div class="project-card__heading">
+                                        <div class="project-icon"><i class="fas fa-cart-shopping"></i></div>
+                                        <div>
+                                            <h3 class="project-name">الشراع للخدمات والتجارة الرقمية</h3>
+                                            <p class="project-type">E-Commerce &amp; Inventory System</p>
+                                        </div>
+                                    </div>
+                                    <span class="project-badge"><i class="fas fa-lock"></i> مشروع هندسي متكامل - كود
+                                        مغلق</span>
+                                </div>
+                                <p class="project-desc">منصة تجارة إلكترونية متكاملة تتيح للمستخدمين تصفح المنتجات
+                                    وشراءها، وتتضمن لوحة تحكم (Dashboard) شاملة للمشرفين لإدارة المخزون، تتبع الطلبات،
+                                    وتوليد تقارير المبيعات بشكل دوري. تم التركيز في هذا المشروع على بناء قاعدة بيانات
+                                    متوافقة مع معايير الـ ACID لضمان سلامة العمليات المالية وتحسين سرعة الاستعلامات
+                                    تحت الضغط العالي.</p>
+                                <div class="project-stack">
+                                    <span class="project-tag">Laravel (PHP)</span>
+                                    <span class="project-tag">Vue.js</span>
+                                    <span class="project-tag">MySQL</span>
+                                    <span class="project-tag">Bootstrap</span>
+                                    <span class="project-tag">RESTful APIs</span>
+                                </div>
+                            </div>
+
+                            <!-- ===== المشروع 2 ===== -->
+                            <div class="project-card">
+                                <div class="project-card__top">
+                                    <div class="project-card__heading">
+                                        <div class="project-icon"><i class="fas fa-list-check"></i></div>
+                                        <div>
+                                            <h3 class="project-name">منصة TaskFlow لإدارة المشاريع</h3>
+                                            <p class="project-type">TaskFlow Management System</p>
+                                        </div>
+                                    </div>
+                                    <span class="project-badge"><i class="fas fa-lock"></i> مشروع هندسي متكامل - كود
+                                        مغلق</span>
+                                </div>
+                                <p class="project-desc">تطبيق ويب متقدم لإدارة المشاريع والمهام البرمجية للفرق الكبيرة
+                                    (يشبه Trello و Jira). يسمح النظام بإنشاء مساحات عمل (Workspaces)، توزيع المهام،
+                                    وتحديث حالتها بشكل فوري. تم تصميم الواجهات الخلفية للمنصة لتكون خفيفة وسريعة جداً
+                                    مع تطبيق أفضل ممارسات الحماية لمنع ثغرات حقن البيانات (SQL Injection) وثغرات الـ
+                                    XSS.</p>
+                                <div class="project-stack">
+                                    <span class="project-tag">Node.js</span>
+                                    <span class="project-tag">Next.js</span>
+                                    <span class="project-tag">JavaScript</span>
+                                    <span class="project-tag">PostgreSQL</span>
+                                    <span class="project-tag">Tailwind CSS</span>
+                                </div>
+                            </div>
+
+                            <!-- ===== المشروع 3 ===== -->
+                            <div class="project-card">
+                                <div class="project-card__top">
+                                    <div class="project-card__heading">
+                                        <div class="project-icon"><i class="fas fa-microchip"></i></div>
+                                        <div>
+                                            <h3 class="project-name">سكربت أتمتة وتجميع البيانات المخصص</h3>
+                                            <p class="project-type">Automated Data Core Script</p>
+                                        </div>
+                                    </div>
+                                    <span class="project-badge"><i class="fas fa-lock"></i> مشروع هندسي متكامل - كود
+                                        مغلق</span>
+                                </div>
+                                <p class="project-desc">نظام برمجي مخصص (Custom Scripting) يقوم بسحب وتجميع البيانات من
+                                    مصادر مختلفة عبر الـ APIs، ثم معالجتها وتصنيفها برمجياً لتقديم تقارير دقيقة. تم
+                                    بناء النظام بالاعتماد على البرمجة كائنية التوجه (OOP) لضمان سهولة التعديل عليه، مع
+                                    تحسين استهلاك المعالج والذاكرة أثناء التعامل مع ملفات البيانات الضخمة.</p>
+                                <div class="project-stack">
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">Django</span>
+                                    <span class="project-tag">REST APIs</span>
+                                    <span class="project-tag">OOP</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="back-to-top btn"></div>
+
+    <!-- JavaScripts -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $('.nav a').off('click');
+        $(document).off('click', '.nav a');
+    </script>
+</body>
+
+</html>
