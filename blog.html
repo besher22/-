@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>besher coding | المدونة</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="author" content="ArtTemplate" />
+    <meta name="description" content="مدونة بشر الحاج عمر - مقالات وآراء حول البرمجة والذكاء الاصطناعي" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="besher coding | المدونة" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="me.jpeg" />
+    <meta property="og:description" content="مدونة بشر الحاج عمر" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="114x114" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="72x72" href="me.jpeg">
+    <link rel="shortcut icon" href="me.jpeg" type="image/jpeg">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styl.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        .blog-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-18);
+            padding: 1.75rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .blog-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .blog-card__meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .blog-tag {
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            color: #a5b4fc;
+            border-radius: 20px;
+        }
+
+        .blog-card__date,
+        .blog-card__readtime {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .blog-card__title {
+            margin: 0 0 1rem 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-heading);
+            line-height: 1.5;
+        }
+
+        .blog-card__body p {
+            line-height: 1.9;
+            color: var(--color-paragraph);
+            font-size: 0.97rem;
+            margin: 0 0 1.1rem 0;
+        }
+
+        .blog-card__body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-card__author {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1.4rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .blog-card__author img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .blog-card__author span {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .nav__item a.active {
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="container gutter-top gutter-bottom">
+            <div class="row sticky-parent">
+
+                <!-- Sidebar -->
+                <aside class="col-12 col-md-12 col-xl-3">
+                    <div class="sidebar box-outer sticky-column">
+                        <div class="sidebar__base-info">
+                            <figure class="avatar-box">
+                                <img src="me.jpeg" alt="بشر الحاج عمر">
+                            </figure>
+                            <div class="text-xl-center">
+                                <h3 class="title title--h3 sidebar__name">بشر الحاج عمر</h3>
+                                <div class="badge">مبرمج و صانع محتوي</div>
+                            </div>
+                            <button class="btn btn--small btn--icon-right sidebar__btn js-btn-toggle">
+                                <span>عرض الروابط</span><i class="feathericon-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="sidebar__additional-info js-show">
+                            <div class="separation"></div>
+                            <ul class="details-info">
+                                <li class="details-info__item">
+                                    <span class="box box--s2 icon-box"><i class="font-icon icon-envelope"></i></span>
+                                    <div class="contacts-block__info">
+                                        <span class="overhead">البريد الالكتروني</span>
+                                        <a class="text-overflow" href="mailto:besherallhagomar87@gmail.com"
+                                            title="besherallhagomar87@gmail.com"
+                                            style="font-size:13px;">b.hagomar87@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="details-info__item">
+                                    <span class="box box--s2 icon-box"><i class="font-icon icon-phone"></i></span>
+                                    <div class="contacts-block__info">
+                                        <span class="overhead">واتس اب للاعمال والتعاون</span>
+                                        <a href=""><span class="text-overflow"
+                                                title="+963991318649">963991318649+</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="separation d-xl-none"></div>
+                            <div class="social">
+                                <a class="social__link" href=""><i class="feathericon-linkedin"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-facebook"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-youtube"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Content -->
+                <div class="col-12 col-md-12 col-xl-9">
+                    <div class="box-outer">
+
+                        <!-- Menu -->
+                        <div class="nav-container">
+                            <ul class="nav">
+                                <li class="nav__item"><a href="index.html">الرئيسية</a></li>
+                                <li class="nav__item"><a href="resume.html">السيرة الذاتية</a></li>
+                                <li class="nav__item"><a href="about.html">معرض الاعمال</a></li>
+                                <li class="nav__item"><a href="about.html">المهارات</a></li>
+                                <li class="nav__item"><a href="about.html">الخدمات</a></li>
+                                <li class="nav__item"><a href="blog.html" class="active">المدونة</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Blog Header -->
+                        <div class="pb-0 pb-sm-2">
+                            <h1 class="title title--h1 title__separate">المدونة</h1>
+                            <p style="font-size: large;">أفكار وآراء حول البرمجة، الذكاء الاصطناعي، وتجربتي اليومية في
+                                هذا المجال.</p>
+                        </div>
+
+                        <!-- Blog Posts -->
+                        <div class="blog-grid">
+
+                            <!-- ===== المقال 1 (منشور) ===== -->
+                            <article class="blog-card">
+                                <div class="blog-card__meta">
+                                    <span class="blog-tag">رأي</span>
+                                    <span class="blog-card__date"><i class="fas fa-calendar-day"></i> 30 يونيو
+                                        2026</span>
+                                    <span class="blog-card__readtime"><i class="fas fa-clock"></i> 3 دقائق قراءة</span>
+                                </div>
+
+                                <h2 class="blog-card__title">هل سيقضي الذكاء الاصطناعي فعلاً على المبرمجين؟</h2>
+
+                                <div class="blog-card__body">
+                                    <p>كل فترة أقرأ عنوانًا يقول: "الذكاء الاصطناعي سيقضي على المبرمجين". بصراحة، لا
+                                        أرى أن هذا سيحدث. ما أراه هو أن الذكاء الاصطناعي غيّر طريقة عملنا فقط.</p>
+
+                                    <p>اليوم أستخدمه في البحث، وتجربة الأفكار، وتسريع كتابة بعض الأكواد، لكنه لا يفهم
+                                        الهدف من المشروع كما أفهمه، ولا يستطيع من تلقاء نفسه مناقشة العميل، أو اختيار
+                                        أفضل بنية للنظام، أو اتخاذ القرارات التي تعتمد على الخبرة والمنطق.</p>
+
+                                    <p>المبرمج ليس شخصًا يكتب أسطرًا من الكود فقط، بل شخص يحل المشكلات ويبني حلولًا
+                                        تناسب الواقع. لهذا السبب أعتقد أن الذكاء الاصطناعي لن يستبدل المبرمجين، بل
+                                        سيستبدل المبرمج الذي يرفض التطور. أما من يتعلم استخدامه بذكاء، فسيبقى مطلوبًا
+                                        وسيقدم قيمة أكبر من أي وقت مضى.</p>
+                                </div>
+
+                                <div class="blog-card__author">
+                                    <img src="me.jpeg" alt="بشر الحاج عمر">
+                                    <span>بقلم بشر الحاج عمر</span>
+                                </div>
+                            </article>
+                            
+
+
+
+
+                            <article class="blog-card">
+                                <div class="blog-card__meta">
+                                    <span class="blog-tag">تحليل</span>
+                                    <span class="blog-card__date"><i class="fas fa-calendar-day"></i> 22 نوفمبر
+                                        2026</span>
+                                    <span class="blog-card__readtime"><i class="fas fa-clock"></i> 5 دقائق قراءة</span>
+                                </div>
+
+                                <h2 class="blog-card__title">الفرق بين موقع يبنيه الذكاء الاصطناعي وموقع يبنيه مبرمج محترف</h2>
+
+                                <div class="blog-card__body">
+                                    <p>قد يستطيع الذكاء الاصطناعي إنشاء موقع خلال دقائق، لكنه غالبًا يبني ما يُطلب منه فقط. أما المبرمج المحترف، فيفكر قبل أن يكتب أول سطر من الكود. يسأل عن الهدف، يحلل احتياجات المستخدم، ويصمم تجربة تناسب المشروع، لا مجرد صفحة تعمل.
+
+الموقع الذي يُبنى بالذكاء الاصطناعي قد يكون بداية ممتازة، لكنه غالبًا يحتاج إلى تعديلات وتحسينات ليصبح سريعًا، آمنًا، وقابلًا للتوسع. هنا يظهر دور المبرمج الحقيقي؛ فهو لا ينسخ حلولًا جاهزة، بل يبني حلولًا تناسب كل مشروع على حدة.
+
+برأيي، الذكاء الاصطناعي أداة رائعة داخل صندوق أدوات المبرمج، لكنه ليس الصندوق كله. أفضل المواقع التي نستخدمها اليوم لم تُبنَ لأن أحدهم ضغط زر "Generate"، بل لأنها نتاج خبرة، وقرارات هندسية، وتجارب متراكمة. لهذا السبب سيبقى المبرمج المحترف هو من يقود المشروع، حتى مع تطور الذكاء الاصطناعي.
+</p>
+                                </div>
+
+                                <div class="blog-card__author">
+                                    <img src="me.jpeg" alt="بشر الحاج عمر">
+                                    <span>بقلم بشر الحاج عمر</span>
+                                </div>
+                            </article>
+
+
+                            <!--
+                            ===== مسودة: المقال 2 (غير منشور) =====
+                            انسخ هذا الكود وضعه بعد المقال الأول، عدّل العنوان والتاريخ والمحتوى، ثم احذف علامات التعليق <!- - و - ->
+
+                            
+                            -->
+
+                            <!--
+                            ===== مسودة: المقال 3 (غير منشور) =====
+
+                            <article class="blog-card">
+                                <div class="blog-card__meta">
+                                    <span class="blog-tag">تصنيف المقال</span>
+                                    <span class="blog-card__date"><i class="fas fa-calendar-day"></i> التاريخ</span>
+                                    <span class="blog-card__readtime"><i class="fas fa-clock"></i> X دقائق قراءة</span>
+                                </div>
+
+                                <h2 class="blog-card__title">عنوان المقال الثالث هنا</h2>
+
+                                <div class="blog-card__body">
+                                    <p>الفقرة الأولى من المقال...</p>
+                                    <p>الفقرة الثانية من المقال...</p>
+                                </div>
+
+                                <div class="blog-card__author">
+                                    <img src="me.jpeg" alt="بشر الحاج عمر">
+                                    <span>بقلم بشر الحاج عمر</span>
+                                </div>
+                            </article>
+                            -->
+
+                            <!--
+                            ===== مسودة: المقال 4 (غير منشور) =====
+
+                            <article class="blog-card">
+                                <div class="blog-card__meta">
+                                    <span class="blog-tag">تصنيف المقال</span>
+                                    <span class="blog-card__date"><i class="fas fa-calendar-day"></i> التاريخ</span>
+                                    <span class="blog-card__readtime"><i class="fas fa-clock"></i> X دقائق قراءة</span>
+                                </div>
+
+                                <h2 class="blog-card__title">عنوان المقال الرابع هنا</h2>
+
+                                <div class="blog-card__body">
+                                    <p>الفقرة الأولى من المقال...</p>
+                                    <p>الفقرة الثانية من المقال...</p>
+                                </div>
+
+                                <div class="blog-card__author">
+                                    <img src="me.jpeg" alt="بشر الحاج عمر">
+                                    <span>بقلم بشر الحاج عمر</span>
+                                </div>
+                            </article>
+                            -->
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="back-to-top btn"></div>
+
+    <!-- JavaScripts -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $('.nav a').off('click');
+        $(document).off('click', '.nav a');
+    </script>
+</body>
+
+</html>
